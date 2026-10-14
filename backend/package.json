@@ -12,7 +12,8 @@
     "test:coverage": "node --test --test-isolation=none --test-concurrency=1 --experimental-test-coverage",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "migrate:pharmacy": "node scripts/migrate-pharmacy.mjs"
   },
   "keywords": [],
   "author": "",

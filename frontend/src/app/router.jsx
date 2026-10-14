@@ -1,3 +1,4 @@
+import { PharmacyPage } from "../features/pharmacy/PharmacyPage";
 import {
   createBrowserRouter,
   Navigate,
@@ -56,7 +57,11 @@ const router = createBrowserRouter([
           {
             element: <OwnerGate />,
             children: [
-              { index: true, element: <DashboardPage /> },
+              { index: true, element: <Navigate to="/app/pharmacy" replace /> },
+              { path: "pharmacy", element: <PharmacyPage /> },
+              { path: "pharmacy/:view", element: <PharmacyPage /> },
+              { path: "pharmacy/receipts/:receiptId", element: <PharmacyPage /> },
+              { path: "retail", element: <DashboardPage /> },
               { path: "products", element: <ProductsPage /> },
               {
                 path: "inventory",

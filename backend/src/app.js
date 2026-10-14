@@ -1,3 +1,4 @@
+import { createPharmacyRouter } from './modules/pharmacy/pharmacy.routes.js'
 import express from 'express'
 import cors from 'cors'
 import { AppError } from './errors/AppError.js'
@@ -40,7 +41,8 @@ export function createApp({
   returnService,
   expenseService,
   mpesaService,
-  readinessCheck
+  readinessCheck,
+  pharmacyService
 }) {
   const app = express()
   const allowedOrigins = new Set(config.corsOrigins)
@@ -92,6 +94,8 @@ export function createApp({
   app.use('/api/v1', createReturnRouter({ authService, returnService }))
   app.use('/api/v1/expenses', createExpenseRouter({ authService, expenseService }))
   if (mpesaService) app.use('/api/v1', createMpesaRouter({ authService, mpesaService }))
+
+  if (pharmacyService) app.use('/api/v1/pharmacy/receipts', createPharmacyRouter({ authService, pharmacyService }))
 
   app.use(notFoundMiddleware)
   app.use(errorMiddleware({ logger, nodeEnv: config.nodeEnv }))

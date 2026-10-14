@@ -4,7 +4,7 @@ import { ChartNoAxesCombined, CreditCard, Grid2X2, LogOut, Menu, PackageSearch, 
 import { useAuth } from '../../features/auth/AuthContext'
 import { BrandMark } from '../branding/BrandMark'
 import { HeyDukaAnnouncement } from '../../features/assistant/HeyDukaAnnouncement'
-const links = [['/app', 'Overview', Grid2X2, true], ['/app/products', 'Products & Stock', PackageSearch], ['/app/sales', 'Sales', ReceiptText], ['/app/shopkeepers', 'Shopkeepers', UsersRound], ['/app/payments', 'Payments', CreditCard], ['/app/expenses', 'Expenses', WalletCards], ['/app/reports', 'Reports', ChartNoAxesCombined], ['/app/settings', 'Settings', Settings], ['/app/profile', 'Profile', UserRound]]
+const links = [['/app/pharmacy', 'Pharmacy receiving', PackageSearch], ['/app/retail', 'Retail overview', Grid2X2, true], ['/app/products', 'Products & Stock', PackageSearch], ['/app/sales', 'Sales', ReceiptText], ['/app/shopkeepers', 'Shopkeepers', UsersRound], ['/app/payments', 'Payments', CreditCard], ['/app/expenses', 'Expenses', WalletCards], ['/app/reports', 'Reports', ChartNoAxesCombined], ['/app/settings', 'Settings', Settings], ['/app/profile', 'Profile', UserRound]]
 
 export function OwnerShell() {
   const [open, setOpen] = useState(false); const auth = useAuth()

@@ -1,3 +1,5 @@
+import { PharmacyRepository } from './modules/pharmacy/pharmacy.repository.js'
+import { PharmacyService } from './modules/pharmacy/pharmacy.service.js'
 import { createSupabaseClients } from './config/supabase.js'
 import { createLogger } from './utils/logger.js'
 import { AuthService } from './modules/auth/auth.service.js'
@@ -89,6 +91,8 @@ export function buildDependencies(config) {
   const expenseService = new ExpenseService({ expenseRepository, shopService, logger })
   const mpesaService = new MpesaService({ repository: mpesaRepository, shopService, gateway: new DarajaGateway(), cipher: createCredentialCipher(config.mpesaCredentialsEncryptionKey), publicApiUrl: config.publicApiUrl, logger })
 
+  const pharmacyService = new PharmacyService({ repository: new PharmacyRepository(clients), shopService })
+
   const readinessCheck = async () => {
     const { error } = await clients.adminClient.from('users').select('id').limit(1)
     if (error) throw new Error('Supabase dependency is unavailable')
@@ -110,6 +114,7 @@ export function buildDependencies(config) {
     expenseService,
     mpesaService,
     monthlyReportJob,
-    readinessCheck
+    readinessCheck,
+    pharmacyService
   }
 }
