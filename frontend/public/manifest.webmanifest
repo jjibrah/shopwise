@@ -1,0 +1,17 @@
+{
+  "name": "Dukani Pharmacy POS",
+  "short_name": "Dukani",
+  "description": "Pharmacy point of sale for Kenya",
+  "start_url": "/pos",
+  "display": "standalone",
+  "background_color": "#f4f8fc",
+  "theme_color": "#1261b5",
+  "icons": [
+    {
+      "src": "/pharmacy-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

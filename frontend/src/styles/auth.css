@@ -1,0 +1,338 @@
+.ph-auth {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  background: var(--ph-white);
+}
+.ph-auth-story {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--ph-soft);
+  padding: 42px clamp(32px, 4.6vw, 72px);
+  gap: 48px;
+}
+.ph-auth-story-content {
+  max-width: 470px;
+  padding-block: 20px;
+}
+.ph-auth-story h2 {
+  font-size: clamp(46px, 4.9vw, 72px);
+  line-height: 1.03;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+.ph-auth-story-content > p {
+  margin-top: 24px;
+  font-size: 18px;
+  max-width: 360px;
+}
+.ph-auth-record {
+  background: var(--ph-paper);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-top: 40px;
+  transform: rotate(-2deg);
+  animation: ph-product-in 0.7s both;
+}
+.ph-auth-record > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+.ph-auth-record > strong {
+  display: block;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-top: 22px;
+}
+.ph-auth-journey {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 22px;
+  font-size: 14px;
+}
+.ph-auth-journey > span {
+  padding: 7px 10px;
+  background: var(--ph-soft);
+  border-radius: 4px;
+}
+.ph-auth-record > p {
+  font-size: 13px;
+  margin-top: 24px;
+}
+.ph-auth-benefits {
+  display: grid;
+  gap: 13px;
+  margin-top: 32px;
+  font-size: 14px;
+}
+.ph-auth-benefits > span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.ph-auth-story-footer {
+  font-size: 13px;
+}
+.ph-auth-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 36px clamp(24px, 4vw, 64px) 24px;
+}
+.ph-auth-main > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  font-size: 13px;
+}
+.ph-auth-main > header > p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.ph-auth-main > header > p > a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 500;
+}
+.ph-auth-back {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  min-height: 44px;
+}
+.ph-auth-form-wrap {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  padding-block: 44px;
+}
+.ph-auth-form {
+  width: 100%;
+  max-width: 420px;
+  animation: ph-arrive 0.55s both;
+}
+.ph-auth-form h1 {
+  font-size: clamp(32px, 3.2vw, 44px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.ph-auth-intro {
+  margin-top: 16px !important;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.ph-auth-form form {
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+}
+.ph-field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ph-input {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid var(--ph-line); /* taste-skill-ignore: visible input boundaries are a form-field convention. */
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--ph-ink);
+  background: var(--ph-white);
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+.ph-input:focus {
+  border-color: var(--ph-accent);
+  outline: 2px solid var(--ph-soft);
+  outline-offset: 1px;
+}
+.ph-input::placeholder {
+  color: #5d738b;
+  font-size: 14px;
+}
+.ph-password {
+  position: relative;
+}
+.ph-password input {
+  padding-right: 48px;
+}
+.ph-password button {
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ph-ink);
+  cursor: pointer;
+}
+.ph-password button:hover {
+  background: var(--ph-paper);
+}
+.ph-form-help {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.ph-auth-passwords {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.ph-auth-submit {
+  width: 100%;
+  min-height: 52px !important;
+  font-size: 15px !important;
+  justify-content: space-between !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  background: var(--ph-accent) !important;
+  padding-inline: 20px !important;
+}
+.ph-auth-submit:hover {
+  background: var(--ph-dark) !important;
+  transform: translateY(-1px);
+}
+.ph-auth-switch {
+  font-size: 14px;
+  margin-top: 24px !important;
+}
+.ph-auth-switch a,
+.ph-auth-consent a {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ph-auth-consent {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  align-items: flex-start;
+}
+.ph-auth-consent input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ph-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ph-auth-footnote {
+  font-size: 13px;
+  margin-top: 18px !important;
+}
+.ph-form-message {
+  padding: 14px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin-top: 22px;
+  line-height: 1.5;
+}
+.ph-form-error {
+  background: #fcece8;
+  color: #952e24;
+}
+.ph-form-success {
+  background: var(--ph-soft);
+  color: var(--ph-ink);
+}
+.ph-auth-main > footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 13px;
+}
+.ph-auth-main > footer > div {
+  display: flex;
+  gap: 20px;
+}
+.ph-auth-mobile-brand {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .ph-auth-main > header > p {
+    display: none;
+  }
+  .ph-auth-story {
+    padding-inline: 32px;
+  }
+  .ph-auth-record {
+    padding: 22px;
+  }
+  .ph-auth-record > div:first-child {
+    font-size: 13px;
+  }
+  .ph-auth-story h2 {
+    font-size: 54px;
+  }
+}
+@media (max-width: 850px) {
+  .ph-auth {
+    grid-template-columns: 1fr;
+  }
+  .ph-auth-story {
+    display: none;
+  }
+  .ph-auth-main {
+    min-height: 100dvh;
+    padding: 20px 28px 24px;
+  }
+  .ph-auth-main > header > p {
+    display: flex;
+  }
+  .ph-auth-mobile-brand {
+    display: block;
+    margin-top: 24px;
+  }
+  .ph-auth-form-wrap {
+    padding-block: 42px;
+  }
+  .ph-auth-form h1 {
+    font-size: 38px;
+  }
+  .ph-auth-form {
+    max-width: 440px;
+  }
+}
+@media (max-width: 480px) {
+  .ph-auth-main {
+    padding-inline: 20px;
+  }
+  .ph-auth-main > header > p {
+    display: none;
+  }
+  .ph-auth-mobile-brand {
+    margin-top: 20px;
+  }
+  .ph-auth-form-wrap {
+    padding-block: 36px;
+  }
+  .ph-auth-form h1 {
+    font-size: 34px;
+  }
+  .ph-auth-passwords {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ph-auth-form form {
+    gap: 18px;
+  }
+  .ph-auth-main > footer {
+    font-size: 13px;
+  }
+}

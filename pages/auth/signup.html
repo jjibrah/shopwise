@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Create a Shopwise owner account" />
+    <title>Create account — Shopwise</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/auth.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <aside class="auth-aside">
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <div>
+            <div class="brand-name">Shopwise</div>
+            <div class="brand-sub">MiniPOS</div>
+          </div>
+        </div>
+        <div class="auth-message">
+          <div class="auth-eyebrow">A simpler way to start</div>
+          <h1>Your shop, ready for a better routine.</h1>
+          <p>
+            Create the owner account now. Products, shop details and staff
+            access are added later from one focused workspace.
+          </p>
+          <div class="auth-points">
+            <div class="auth-point">
+              <span class="auth-check">✓</span>No role confusion
+            </div>
+            <div class="auth-point">
+              <span class="auth-check">✓</span>Guided shop setup
+            </div>
+            <div class="auth-point">
+              <span class="auth-check">✓</span>Counter-ready POS
+            </div>
+            <div class="auth-point">
+              <span class="auth-check">✓</span>Useful from day one
+            </div>
+          </div>
+        </div>
+        <div class="auth-foot">
+          Shopwise MiniPOS · Built for independent shops
+        </div>
+      </aside>
+      <section class="auth-main">
+        <div class="auth-card">
+          <h1>Create owner account</h1>
+          <p>Start with your details. You’ll set up the shop next.</p>
+          <form
+            class="auth-form"
+            data-demo-auth
+            data-target="../admin/owner.html#settings"
+          >
+            <div class="form-group">
+              <label for="name">Full name</label
+              ><input
+                class="input"
+                id="name"
+                autocomplete="name"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label
+              ><input
+                class="input"
+                id="email"
+                type="email"
+                autocomplete="email"
+                inputmode="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrap">
+                  <input
+                    class="input"
+                    id="password"
+                    type="password"
+                    minlength="8"
+                    autocomplete="new-password"
+                    placeholder="At least 8 characters"
+                    required
+                  /><button
+                    class="password-toggle"
+                    type="button"
+                    data-password-toggle="password"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"
+                      />
+                      <circle cx="12" cy="12" r="2.5" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="password-meter" aria-hidden="true">
+                  <span></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="confirm">Confirm password</label>
+                <div class="password-wrap">
+                  <input
+                    class="input"
+                    id="confirm"
+                    type="password"
+                    minlength="8"
+                    autocomplete="new-password"
+                    required
+                    aria-describedby="confirmError"
+                  /><button
+                    class="password-toggle"
+                    type="button"
+                    data-password-toggle="confirm"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"
+                      />
+                      <circle cx="12" cy="12" r="2.5" />
+                    </svg>
+                  </button>
+                </div>
+                <span class="field-error" id="confirmError"
+                  >Passwords do not match.</span
+                >
+              </div>
+            </div>
+            <label class="check-row"
+              ><input type="checkbox" required />I agree to the terms and
+              privacy policy.</label
+            ><button class="btn btn-primary" type="submit">
+              Create my account
+            </button>
+          </form>
+          <div class="secure-note">
+            <svg viewBox="0 0 24 24">
+              <rect x="5" y="10" width="14" height="11" rx="2" />
+              <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+            >Your password is handled through a secure sign-in flow
+          </div>
+          <p class="auth-switch">
+            Already have an account? <a href="login.html">Sign in</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="../../assets/js/api/config.js"></script>
+    <script src="../../assets/js/api/apiClient.js"></script>
+    <script src="../../assets/js/auth/session.js"></script>
+    <script src="../../assets/js/pages/auth.js"></script>
+  </body>
+</html>

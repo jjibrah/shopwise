@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Shopwise fast checkout workspace" />
+    <title>Shopwise POS</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/app.css" />
+    <link rel="stylesheet" href="../../assets/css/pos.css" />
+    <link rel="stylesheet" href="../../assets/css/refinements.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+  <body>
+    <main class="pos-page">
+      <header class="pos-header">
+        <a class="brand" href="shopkeeper.html"
+          ><div class="brand-mark">S</div>
+          <div>
+            <div class="brand-name">Shopwise</div>
+            <div class="brand-sub">Counter POS</div>
+          </div></a
+        >
+        <div class="pos-search">
+          <svg class="icon"><use href="#i-search" /></svg
+          ><label class="sr-only" for="productSearch">Search products</label
+          ><input
+            id="productSearch"
+            autocomplete="off"
+            placeholder="Search name, SKU or scan barcode"
+          />
+        </div>
+        <button class="pos-nav-btn" id="recentSalesBtn">
+          <svg class="icon"><use href="#i-receipt" /></svg
+          ><span class="hide-mobile">Recent sales</span>
+        </button>
+        <div class="pos-user">
+          <div class="avatar">MO</div>
+          <div class="user-meta">
+            <strong>Miriam</strong><span>Shopkeeper</span>
+          </div>
+          <a class="pos-nav-btn" href="profile.html" aria-label="Profile"
+            ><svg class="icon"><use href="#i-user" /></svg></a
+          ><a
+            class="pos-nav-btn"
+            href="../auth/login.html"
+            aria-label="Sign out"
+            ><svg class="icon"><use href="#i-logout" /></svg
+          ></a>
+        </div>
+      </header>
+      <div class="pos-body">
+        <section class="catalog">
+          <div class="catalog-head">
+            <div>
+              <h1>Products</h1>
+              <small id="productCount"></small>
+            </div>
+            <small>Tap an item to add it</small>
+          </div>
+          <div class="category-tabs" id="categoryTabs"></div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+        <aside class="cart-panel" id="cartPanel" aria-label="Current sale">
+          <header class="cart-head">
+            <div>
+              <h2>Current sale</h2>
+              <small id="cartItemCount">0 items</small>
+            </div>
+            <div class="inline-actions">
+              <button class="btn btn-ghost" id="clearCart">Clear</button
+              ><button
+                class="btn btn-ghost btn-icon mobile-menu"
+                id="closeCart"
+                aria-label="Close cart"
+              >
+                ×
+              </button>
+            </div>
+          </header>
+          <div class="cart-lines" id="cartLines"></div>
+          <footer class="cart-footer" id="cartFooter"></footer>
+        </aside>
+      </div>
+      <button class="btn btn-primary btn-lg mobile-cart-button" id="openCart">
+        View cart · <span id="mobileTotal">KES 0</span>
+      </button>
+    </main>
+    <div class="modal-backdrop" id="modalRoot" aria-hidden="true"></div>
+    <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+    <div id="receiptPrint"></div>
+    <svg class="sr-only" aria-hidden="true">
+      <defs>
+        <symbol id="i-search" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-4-4" />
+        </symbol>
+        <symbol id="i-receipt" viewBox="0 0 24 24">
+          <path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z" />
+          <path d="M9 8h6M9 12h6" />
+        </symbol>
+        <symbol id="i-user" viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21a8 8 0 0 1 16 0" />
+        </symbol>
+        <symbol id="i-logout" viewBox="0 0 24 24">
+          <path
+            d="M10 17l5-5-5-5M15 12H3M15 3h5a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-5"
+          />
+        </symbol>
+        <symbol id="i-x" viewBox="0 0 24 24">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24">
+          <rect x="4" y="4" width="6" height="6" />
+          <rect x="14" y="4" width="6" height="6" />
+          <rect x="4" y="14" width="6" height="6" />
+          <rect x="14" y="14" width="6" height="6" />
+        </symbol>
+        <symbol id="i-print" viewBox="0 0 24 24">
+          <path
+            d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../../assets/js/api/config.js"></script>
+    <script src="../../assets/js/api/apiClient.js"></script>
+    <script src="../../assets/js/auth/session.js"></script>
+    <script src="../../assets/js/api/shopwiseApi.js"></script>
+    <script src="../../assets/js/ui/ui.js"></script>
+    <script src="../../assets/js/pages/pos.js"></script>
+  </body>
+</html>
